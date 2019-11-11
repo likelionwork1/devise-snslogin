@@ -1,0 +1,9 @@
+<h1>Homes#index</h1>
+<p>Find me in app/views/homes/index.html.erb</p>
+
+<% if user_signed_in? %>
+    현재 로그인된 유저의 이메일 : <%= current_user.email %>
+    <%= link_to "로그아웃", destroy_user_session_path, method: :delete, data: { confirm: "Are you sure?" } %>
+<% else %>
+    <%= link_to "로그인", new_user_session_path %>
+<% end %>
