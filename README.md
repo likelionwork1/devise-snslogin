@@ -9,3 +9,7 @@
     <%= link_to "로그인", new_user_session_path %>
 <% end %>
 ```
+
+### 2. [app/controllers/users/omniauth_callbacks_controller.rb](https://github.com/likelionwork1/devise-snslogin/blob/master/app/controllers/users/omniauth_callbacks_controller.rb)
+
+### 3. [app/models/user.rb](https://github.com/likelionwork1/devise-snslogin/blob/master/app/models/user.rb)
