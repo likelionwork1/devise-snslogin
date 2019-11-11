@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### 1. 로그인 되어있으면 로그아웃 보여주고, 로그인 안되어있으면 로그인 보여주기
+```
+<% if user_signed_in? %>
+    현재 로그인된 유저의 이메일 : <%= current_user.email %>
+    <%= link_to "로그아웃", destroy_user_session_path, method: :delete, data: { confirm: "Are you sure?" } %>
+<% else %>
+    <%= link_to "로그인", new_user_session_path %>
+<% end %>
+```
